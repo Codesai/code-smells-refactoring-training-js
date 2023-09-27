@@ -1,9 +1,7 @@
-# Refactoring Katas
+Smelly Mars Rover code refactoring
+=============================================
 
-### 1. Refactoring a smelly Mars Rover's code
+Smelly Mars Rover code to practice refactoring.
 
-### 2. Refactoring classic Video Store Example
-
-### 3. Refactoring to Hexagonal Architecture 1
-
-### 4. Refactoring to Hexagonal Architecture 2
+We'll use it to learn to recognize some code smells
+and to fix them applying some useful refactorings.
