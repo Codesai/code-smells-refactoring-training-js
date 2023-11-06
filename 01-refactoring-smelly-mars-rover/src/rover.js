@@ -1,9 +1,5 @@
 export class Rover {
 
-    direction;
-    y;
-    x;
-
     constructor(x, y, direction) {
         this.x = x;
         this.y = y;
