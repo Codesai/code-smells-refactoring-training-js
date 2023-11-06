@@ -10,7 +10,7 @@ describe('Acceptance', () => {
     beforeEach(() => {
         messagesSent = [];
         service = new class extends BirthdayService {
-            sendMessage(msg, transport) {
+            _sendMessage(msg, transport) {
                 messagesSent.push(msg);
             }
         };

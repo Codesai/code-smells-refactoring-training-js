@@ -1,22 +1,20 @@
 export class OurDate {
 
-    date;
-
-    constructor(yyyyMMdd) {
-        const [year, month, day] = yyyyMMdd.split("/");
+    constructor(date) {
+        const [year, month, day] = date.split("/");
         this.date = new Date(Number(year), Number(month) - 1, Number(day));
     }
 
-    getDay() {
-        return this.date.getDate();
+    isSameDay(anotherDate) {
+        return anotherDate._getDay() == this._getDay()
+            && anotherDate._getMonth() == this._getMonth();
     }
 
-    getMonth() {
+    _getMonth() {
         return 1 + this.date.getMonth();
     }
 
-    isSameDay(anotherDate) {
-        return anotherDate.getDay() == this.getDay()
-            && anotherDate.getMonth() == this.getMonth();
+    _getDay() {
+        return this.date.getDate();
     }
 }
