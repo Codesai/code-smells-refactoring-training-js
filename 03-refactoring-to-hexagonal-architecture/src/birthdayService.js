@@ -43,6 +43,7 @@ export class BirthdayService {
         this._sendMessage(msg, transport);
     }
 
+    // used for testing :-(
     _sendMessage(msg, transport) {
         transport.sendMail(msg, (err) => {
             if (err) throw new EmailNotSentError(err);
