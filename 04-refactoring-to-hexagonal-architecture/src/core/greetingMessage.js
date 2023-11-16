@@ -3,7 +3,7 @@ import {Greeting} from "./greeting";
 export class GreetingMessage {
 
     constructor(to, greeting) {
-        this._to = to;
+        this.to = to;
         this.greeting = greeting;
     }
 
@@ -17,15 +17,15 @@ export class GreetingMessage {
         return new GreetingMessage(recipient, greeting);
     }
 
-    subject() {
-        return this.greeting.header();
+    getSubject() {
+        return this.greeting.getHeader();
     }
 
-    text() {
-        return this.greeting.content();
+    getText() {
+        return this.greeting.getContent();
     }
 
-    to() {
-        return this._to;
+    getTo() {
+        return this.to;
     }
 }

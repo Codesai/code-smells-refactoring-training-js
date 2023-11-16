@@ -22,9 +22,9 @@ export class BirthdayService {
 
     _send(messages, smtpHost, smtpPort, sender) {
         for (const message of messages) {
-            const recipient = message.to();
-            const body = message.text();
-            const subject = message.subject();
+            const recipient = message.getTo();
+            const body = message.getText();
+            const subject = message.getSubject();
             this._sendTheMessage(smtpHost, smtpPort, sender, subject, body, recipient);
         }
     }

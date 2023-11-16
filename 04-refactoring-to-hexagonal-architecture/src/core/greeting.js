@@ -1,8 +1,8 @@
 export class Greeting {
 
     constructor(header, content) {
-        this._header = header;
-        this._content = content;
+        this.header = header;
+        this.content = content;
     }
 
     static forBirthdayOf(employee){
@@ -11,11 +11,11 @@ export class Greeting {
         return new Greeting(header, content);
     }
 
-    header() {
-        return this._header;
+    getHeader() {
+        return this.header;
     }
 
-    content() {
-        return this._content;
+    getContent() {
+        return this.content;
     }
 }
