@@ -45,11 +45,11 @@ export class BirthdayService {
         };
 
         // Send the message
-        this.sendMessage(msg, transport);
+        this._sendMessage(msg, transport);
     }
 
-    // made protected for testing :-(
-    sendMessage(msg, transport) {
+    // used for testing :-(
+    _sendMessage(msg, transport) {
         transport.sendMail(msg, (err) => {
             if (err) throw new Error("not send");
         });
