@@ -6,8 +6,8 @@ export class OurDate {
     }
 
     isSameDay(anotherDate) {
-        return anotherDate._getDay() == this._getDay()
-            && anotherDate._getMonth() == this._getMonth();
+        return anotherDate._getDay() === this._getDay()
+            && anotherDate._getMonth() === this._getMonth();
     }
 
     _getMonth() {
