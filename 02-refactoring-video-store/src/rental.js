@@ -11,7 +11,4 @@ export class Rental {
     getMovie() {
         return this.movie;
     }
-
-    movie;
-    daysRented;
 }

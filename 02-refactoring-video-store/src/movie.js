@@ -3,9 +3,6 @@ export class Movie {
     static REGULAR = 0;
     static NEW_RELEASE = 1;
 
-    title;
-    priceCode;
-
     constructor(title, priceCode) {
         this.title = title;
         this.priceCode = priceCode;

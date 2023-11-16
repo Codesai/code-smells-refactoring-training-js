@@ -1,11 +1,10 @@
 import {Movie} from "./movie";
 
 export class Customer {
-    name;
-    rentals = [];
 
     constructor(name) {
         this.name = name;
+        this.rentals = [];
     }
 
     addRental(rental) {
