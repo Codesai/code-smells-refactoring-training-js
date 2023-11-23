@@ -6,7 +6,7 @@ import {EmailNotSentError} from "./emailNotSentError";
 
 export class BirthdayService {
 
-    sendGreetings(fileName, ourDate, smtpHost, smtpPort) {
+    sendGreetings(fileName, ourDate, smtpHost, smtpPort, sender) {
         const data = fs.readFileSync(fileName, {encoding: 'utf8'});
         data.split(/\r?\n/).forEach((str) => {
             const employeeData = str.split(", ");
@@ -17,7 +17,7 @@ export class BirthdayService {
                 const body = "Happy Birthday, dear %NAME%!".replace("%NAME%",
                     employee.getFirstName());
                 const subject = "Happy Birthday!";
-                this._sendTheMessage(smtpHost, smtpPort, "sender@here.com", subject,
+                this._sendTheMessage(smtpHost, smtpPort, sender, subject,
                     body, recipient);
             }
         });

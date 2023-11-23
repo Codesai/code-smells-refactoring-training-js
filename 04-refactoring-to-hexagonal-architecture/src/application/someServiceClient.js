@@ -8,8 +8,7 @@ export class SomeServiceClient {
         const filename = "employee_data.txt";
         const service = new BirthdayService(new FileEmployeesRepository(filename));
         try {
-            service.sendGreetings(filename,
-                new OurDate("2008/10/08"), "localhost", 25);
+            service.sendGreetings(new OurDate("2008/10/08"), "localhost", 25,"sender@here.com");
         } catch (e) {
             console.log(e);
         }

@@ -3,6 +3,8 @@ import {OurDate} from "../src/ourDate";
 
 describe('Acceptance', () => {
 
+    const FROM = "sender@here.com";
+    const SMTP_HOST = "localhost";
     const SMTP_PORT= 25;
     let messagesSent;
     let service;
@@ -17,8 +19,7 @@ describe('Acceptance', () => {
     })
 
     it('base scenario', () => {
-        service.sendGreetings("test/resources/employee_data.txt",
-            new OurDate("2008/10/08"), "localhost", SMTP_PORT);
+        service.sendGreetings("test/resources/employee_data.txt", new OurDate("2008/10/08"), SMTP_HOST, SMTP_PORT, FROM);
 
         expect(messagesSent.length).toEqual(1);
         const message = messagesSent[0];
@@ -28,8 +29,7 @@ describe('Acceptance', () => {
     });
 
     it('will not send emails when nobodys birthday', () => {
-        service.sendGreetings("test/resources/employee_data.txt",
-            new OurDate("2008/01/01"), "localhost", SMTP_PORT);
+        service.sendGreetings("test/resources/employee_data.txt", new OurDate("2008/01/01"), SMTP_HOST, SMTP_PORT, FROM);
 
         expect(messagesSent.length).toEqual(0);
     });
